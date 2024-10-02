@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+            color: black;
+            background-color: aqua;
+        }
+        ul{
+            
+            display: flex;
+            padding: 10px;
+        }
+        ul li{
+            list-style-type: none;
+            padding: 10px;
+            
+
+        }
+        .ulist li ol li{
+           
+            list-style-type: lower-alpha;
+        }
+        .ulist li ol li .lo li{
+           list-style-type: disc;
+       }
+       .ulli-first-h{
+        display: none;
+       }
+      
+       .ulli-first:hover .ulli-first-h{
+            display: inline;
+       }
+       .lo{
+        display: none;
+       }
+       .lo:hover .f-lo{
+        display: none;
+       }
+    </style>
+
+</head>
+<body>
+    <div id="Hello" class="h he he heerwe hw hw">
+        
+    <h2>Nasted list in HTML</h2>
+    
+    <ul class="ulist">
+        <li>Home </li>
+        <li class="ulli-first">Product 
+            <ol type="a" class="ulli-first-h" >
+                <li >product-1</li>
+                <li class="f-lo">product-2 
+                    <ol class="lo">
+                        <li >product-1</li>
+                        <li>product-2</li>
+                        <li title="out of stock"><del>product-3 </del> </li>
+                    </ol>
+                </li>
+                <li>product-3</li>
+            </ol>
+
+        </li>
+        <li>Contuct </li>
+        <li>About</li>
+    </ul>
+    </div>
+    <dt>i am</dt>
+    <dd>rafi</dd>
+    <dt>He is</dt>
+    <dd>will be an Engneer</dd>
+
+    <label for=""><a href="https://www.google.com" id="link">hi</a></label>
+
+    <script>
+        // const first=document.querySelector('.ulli-first').style.backgroundColor='red'
+        // console.log(first);
+        const title=document.getElementById('Hello');
+       // title.getAttribute('class');
+        //title.classList;
+        console.log(title);
+        //title.classList.add('helo');
+        title.setAttribute('title','hi i am from js');
+
+        const title2=document.getElementById('link');
+
+        title2.setAttribute('target','_blank');
+        //const bann=document.getElementsByClassName('ulist')[0].innerHTML='<h2>Hello i am rafi</h2> ';
+        const bann=document.getElementsByClassName('ulist')[0].innerText;
+        console.log(bann);
+       
+       
+        
+    </script>
+
+</body>
+</html>
